@@ -4,7 +4,7 @@ const Newsboard =({category})=>{
     const [articles,setArticles]= useState([]);
     const [error, setError] = useState(null);
     useEffect(()=>{
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=c8ce13f96e4d4bb7b2f5ea193ab17eb0`;
+        let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=`;
         fetch(url)
             .then(response => {
                 if (!response.ok) {
