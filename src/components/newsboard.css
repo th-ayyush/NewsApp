@@ -1,0 +1,66 @@
+/* Center the entire Newsboard */
+.newsboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto; /* Centers horizontally */
+    text-align: center;
+}
+
+/* Styling for the title */
+.news-title {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styling for the red badge */
+.news-badge {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Grid container for news articles */
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 20px; /* Space between news cards */
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* No news available text */
+.no-news {
+    font-size: 18px;
+    color: gray;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .news-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns per row for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .news-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 column per row for mobile */
+    }
+}
